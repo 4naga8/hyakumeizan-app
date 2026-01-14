@@ -1,0 +1,72 @@
+.header {
+  background: linear-gradient(135deg, #2d5a27 0%, #4a7c43 100%);
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.titleSection {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.count {
+  font-size: 1rem;
+  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+}
+
+.nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.tab.active {
+  background: white;
+  color: #2d5a27;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .titleSection {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}

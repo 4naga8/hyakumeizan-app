@@ -1,0 +1,121 @@
+.container {
+  padding: 1rem;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.searchRow {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #4a7c43;
+  box-shadow: 0 0 0 2px rgba(74, 124, 67, 0.2);
+}
+
+.clearButton {
+  padding: 0.75rem 1rem;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.clearButton:hover {
+  background: #d0d0d0;
+}
+
+.filterGroup {
+  margin-bottom: 0.75rem;
+}
+
+.filterGroup:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.statusButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.statusButton {
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.statusButton:hover {
+  border-color: #4a7c43;
+  color: #4a7c43;
+}
+
+.statusButton.active {
+  background: #4a7c43;
+  border-color: #4a7c43;
+  color: white;
+}
+
+.regionTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.regionTag {
+  padding: 0.35rem 0.75rem;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.regionTag:hover {
+  border-color: #4a7c43;
+  color: #4a7c43;
+}
+
+.regionTag.active {
+  background: #4a7c43;
+  border-color: #4a7c43;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .statusButtons {
+    flex-wrap: wrap;
+  }
+
+  .statusButton {
+    flex: 1;
+    min-width: auto;
+  }
+}

@@ -1,0 +1,195 @@
+.container {
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.overview {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.progressCircle {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1rem;
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+}
+
+.progressText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.percentage {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4a7c43;
+}
+
+.fraction {
+  display: block;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.overviewTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.section {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTitle {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  color: #333;
+  border-bottom: 2px solid #4a7c43;
+  padding-bottom: 0.5rem;
+}
+
+.regionList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.regionItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.regionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.regionName {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.regionCount {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.regionBar {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.regionProgress {
+  height: 100%;
+  background: linear-gradient(90deg, #4a7c43 0%, #6b9b63 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.yearChart {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 200px;
+  padding-top: 1rem;
+}
+
+.yearItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 60px;
+}
+
+.yearBarContainer {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.yearBar {
+  width: 70%;
+  background: linear-gradient(180deg, #4a7c43 0%, #6b9b63 100%);
+  border-radius: 4px 4px 0 0;
+  min-height: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 4px;
+}
+
+.yearCount {
+  font-size: 0.75rem;
+  color: white;
+  font-weight: bold;
+}
+
+.yearLabel {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.empty {
+  text-align: center;
+  padding: 3rem;
+  color: #999;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .progressCircle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .percentage {
+    font-size: 2rem;
+  }
+
+  .yearChart {
+    height: 150px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+
+  .yearItem {
+    min-width: 40px;
+  }
+
+  .yearBarContainer {
+    height: 120px;
+  }
+}

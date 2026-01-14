@@ -1,0 +1,273 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 1rem;
+}
+
+.modal {
+  background: white;
+  border-radius: 1rem;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.closeButton:hover {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.header {
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.id {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.name {
+  margin: 0.25rem 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.kana {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: #f9f9f9;
+}
+
+.infoItem {
+  text-align: center;
+}
+
+.label {
+  display: block;
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 0.25rem;
+}
+
+.value {
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.form {
+  padding: 1.5rem;
+}
+
+.formTitle {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  color: #4a7c43;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.fieldLabel {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.dateInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.dateInput:focus {
+  outline: none;
+  border-color: #4a7c43;
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #4a7c43;
+}
+
+.fileInput {
+  display: none;
+}
+
+.photoButton {
+  padding: 0.75rem 1.5rem;
+  background: #f0f0f0;
+  border: 1px dashed #ccc;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #666;
+  width: 100%;
+}
+
+.photoButton:hover {
+  background: #e8e8e8;
+  border-color: #4a7c43;
+  color: #4a7c43;
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.photoItem {
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.photoDelete {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photoDelete:hover {
+  background: rgba(200, 0, 0, 0.8);
+}
+
+.actions {
+  padding: 1rem 1.5rem 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.saveButton {
+  flex: 1;
+  padding: 0.875rem;
+  background: #4a7c43;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.saveButton:hover {
+  background: #3d6938;
+}
+
+.saveButton:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.deleteButton {
+  padding: 0.875rem 1.25rem;
+  background: white;
+  border: 1px solid #dc3545;
+  border-radius: 0.5rem;
+  color: #dc3545;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background: #dc3545;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .overlay {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .modal {
+    max-height: 95vh;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .infoItem {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .photoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
